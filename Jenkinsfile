@@ -3,11 +3,6 @@ pipeline {
     label 'master'
   }
   stages {
-    stage('git checkout') {
-      steps {
-        git branch: "main", credentialsId: 'b34bd7bf-a44a-4f1c-b8cb-7d198afad3b1', url: "git@github.com:Tomer20/demo.git"
-      }
-    }
     stage('mvn') {
       steps {
         dir("app") {
