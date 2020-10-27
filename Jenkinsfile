@@ -13,7 +13,7 @@ pipeline {
         dir("app") {
           script { 
             sh '''
-              mv wrapper .mvn/.
+              mkdir .mvn && mv wrapper .mvn/.
               ./mvnw clean install
               ./mvnw test
               ./mvnw package
