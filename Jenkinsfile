@@ -36,7 +36,7 @@ pipeline {
         script { 
           sh '''
             docker-compose up -d
-            curl http://35.198.113.119:8080/failll
+            curl http://35.198.113.119:8080/
           '''
         }
       }
