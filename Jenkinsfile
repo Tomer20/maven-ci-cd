@@ -1,14 +1,4 @@
 pipeline {
-  options {
-    ansiColor('xterm')
-    timestamps()
-    timeout(time: 20, unit: 'MINUTES')
-    buildDiscarder(logRotator(numToKeepStr: '10', artifactDaysToKeepStr: '1', artifactNumToKeepStr: '1', daysToKeepStr: '30'))
-    disableConcurrentBuilds()
-  }
-  agent {
-    label 'master'
-  }
   stages {
     stage('git checkout') {
       steps {
